@@ -126,6 +126,7 @@ mod build_bundled {
             .flag("-DSQLITE_USE_URI")
             .flag("-DHAVE_USLEEP=1")
             .flag("-D_POSIX_THREAD_SAFE_FUNCTIONS") // cross compile with MinGW
+            .flag("-DSQLITE_ENABLE_UPDATE_DELETE_LIMIT=1")
             .warnings(false);
 
         if cfg!(feature = "bundled-sqlcipher") {
